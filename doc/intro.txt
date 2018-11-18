@@ -1,0 +1,35 @@
+This is the documentation of this application:-
+
+Setup:
+
+$mkdir server 
+
+$cd server
+
+$npm init
+
+$npm install --save express
+
+$npm install 
+
+How to Start the index.js file 
+$node index.js
+
+===========Deployment==========
+I used heroku to deploy this application
+
+1) Add the dynamic PORT env variable for express application, w'll use the heroku ENV variable for that:-
+	const PORT = process.env.PORT || 5000;
+
+2) Add the engine object in the packge.json, because the heroku will look into this file while setuping the environment for the application:-
+	"engines": {
+        	 "npm": "6.4.1",
+	         "node": "8.12.0"
+        },
+3) Specify the starting script:-
+	"scripts": {
+    		"start": "node index.js"
+	  },
+
+4) Add the .gitignore file and add the node_modules dir inside.
+
