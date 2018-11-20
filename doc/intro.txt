@@ -2,7 +2,7 @@ This is the documentation of this application:-
 
 Setup:
 
-$mkdir server 
+$mkdir server
 
 $cd server
 
@@ -10,9 +10,9 @@ $npm init
 
 $npm install --save express
 
-$npm install 
+$npm install
 
-How to Start the index.js file 
+How to Start the index.js file
 $node index.js
 
 ===========Deployment==========
@@ -33,3 +33,27 @@ I used heroku to deploy this application
 
 4) Add the .gitignore file and add the node_modules dir inside.
 
+============ Google Oauth ============
+1) npm install --save passport passport-google-oauth20
+
+2) Create the app at google to Authenticate the user
+		https://console.developers.google.com/
+		Select the "google+Api" service
+		And update the following text field values
+		Authorized JavaScript origins: 	http://localhost:5000
+		Authorized redirect URIs: 	http://localhost:5000/oauth/google/callback
+
+		And Save the changes.
+
+3) Add the configuration file under config DIR
+
+			module.exports = {
+				googleClientId: "YOUR-APP-ID",
+				googleClientSecret: "CLIENT-SECRET"
+			};
+
+=================  Nodemon Setup =================
+Nodemon is a utility that will monitor for any changes in your source and automatically restart your server.
+Perfect for development.
+
+$ npm install --save 
