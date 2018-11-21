@@ -1,6 +1,17 @@
 //Requireing the express package module to the code
 const express = require("express");
+
+//Requireing the mongoose packages to intract with MongoDb
+const mongoose = require("mongoose");
+
+//importing the config files
+const keys = require("./config/keys");
+
 require("./services/passport");
+
+//Creating the connection with MongoDb Host at mlab.com
+mongoose.connect(keys.mongoURI);
+
 //creating the express instance
 const app = express();
 

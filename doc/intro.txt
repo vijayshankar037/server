@@ -65,3 +65,11 @@ Add the following line under script module under package.json
 Start the node server with following command and nodeman will monitor the changes and restart the server.
 
 	$npm run dev
+=================  installing MongoDb(mongoose) =================
+Install the mongoose npm package for our application with following command:-
+$npm install --save mongoose
+
+I have added a new configuration key under config dir inside the keys.js files
+	mongoURI: "mongodb://<DB_USER>:<DB_USER_PASSWORD>@<HOST_URI>/<DB_NAME>"
+
+and we made a connection to mongodb host inside the index.js file with mongoose.connect(keys.mongoURI)
