@@ -23,12 +23,12 @@ passport.use(
     (accessToken, refreshToken, profile, done) => {
       console.log("accessToken", accessToken);
       console.log("refreshToken", refreshToken);
-      console.log("profile", profile);
+      console.log("profile :", profile);
     }
   )
 );
-
 //Adding route to make a GET request to the google+
+
 app.get(
   "/auth/google",
   passport.authenticate("google", {

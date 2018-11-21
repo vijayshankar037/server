@@ -56,4 +56,12 @@ I used heroku to deploy this application
 Nodemon is a utility that will monitor for any changes in your source and automatically restart your server.
 Perfect for development.
 
-$ npm install --save 
+$ npm install --save nodemon
+
+Add the following line under script module under package.json
+
+	"dev": "nodemon index.js"
+
+Start the node server with following command and nodeman will monitor the changes and restart the server.
+
+	$npm run dev
