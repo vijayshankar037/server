@@ -6,11 +6,15 @@ const mongoose = require("mongoose");
 
 //importing the config files
 const keys = require("./config/keys");
-
+require("./models/User");
 require("./services/passport");
 
 //Creating the connection with MongoDb Host at mlab.com
-mongoose.connect(keys.mongoURI);
+//mongoose.connect(keys.mongoURI);
+mongoose.connect(
+  keys.mongoURI,
+  { user: keys.mongoDbUser, pass: keys.mongoDbUserPassword }
+);
 
 //creating the express instance
 const app = express();

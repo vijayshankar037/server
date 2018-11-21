@@ -65,6 +65,7 @@ Add the following line under script module under package.json
 Start the node server with following command and nodeman will monitor the changes and restart the server.
 
 	$npm run dev
+
 =================  installing MongoDb(mongoose) =================
 Install the mongoose npm package for our application with following command:-
 $npm install --save mongoose
