@@ -74,3 +74,7 @@ I have added a new configuration key under config dir inside the keys.js files
 	mongoURI: "mongodb://<DB_USER>:<DB_USER_PASSWORD>@<HOST_URI>/<DB_NAME>"
 
 and we made a connection to mongodb host inside the index.js file with mongoose.connect(keys.mongoURI)
+
+=================  installing cookie-session =================
+Install the new package for express to manage the cookies.
+	$npm install --save cookie-session
