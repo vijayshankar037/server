@@ -78,3 +78,16 @@ and we made a connection to mongodb host inside the index.js file with mongoose.
 =================  installing cookie-session =================
 Install the new package for express to manage the cookies.
 	$npm install --save cookie-session
+
+=================  installing react =================
+Now we are going to introduce the react in our application.
+	$sudo npm install -g create-react-app
+
+Create React application:
+	$create-react-app <App-name-client>
+
+Create Optimized react production build
+	$npm run build
+
+
+	$npm install --save concurrently
